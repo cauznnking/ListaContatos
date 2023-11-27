@@ -32,31 +32,37 @@
             this.BtnSair = new System.Windows.Forms.PictureBox();
             this.DgvContatos = new System.Windows.Forms.DataGridView();
             this.GrbAdicionarContatos = new System.Windows.Forms.GroupBox();
-            this.LblNome = new System.Windows.Forms.Label();
-            this.TxbNome = new System.Windows.Forms.TextBox();
-            this.lblApresentacao = new System.Windows.Forms.Label();
-            this.TxbEmail = new System.Windows.Forms.TextBox();
-            this.LblEmail = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.LblTelefone = new System.Windows.Forms.Label();
-            this.LblAniversario = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.BtnAdicionar = new System.Windows.Forms.Button();
+            this.DtpAdicionar = new System.Windows.Forms.DateTimePicker();
+            this.LblAniversario = new System.Windows.Forms.Label();
+            this.LblTelefone = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LblEmail = new System.Windows.Forms.Label();
+            this.TxbEmail = new System.Windows.Forms.TextBox();
+            this.lblApresentacao = new System.Windows.Forms.Label();
+            this.TxbNome = new System.Windows.Forms.TextBox();
+            this.LblNome = new System.Windows.Forms.Label();
             this.GrbEditarContatos = new System.Windows.Forms.GroupBox();
             this.BtnEditar = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.DtpEditar = new System.Windows.Forms.DateTimePicker();
             this.LblAniversarioEdit = new System.Windows.Forms.Label();
             this.LblTelefoneEdit = new System.Windows.Forms.Label();
             this.TxbTelefoneEdit = new System.Windows.Forms.TextBox();
             this.LblEmailEdit = new System.Windows.Forms.Label();
             this.TxbEmailEdit = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.LblApresentarDoEditar = new System.Windows.Forms.Label();
             this.TxbNomeEdit = new System.Windows.Forms.TextBox();
             this.LblNomeEdit = new System.Windows.Forms.Label();
+            this.GrbApagar = new System.Windows.Forms.GroupBox();
+            this.BtnApagar = new System.Windows.Forms.Button();
+            this.LblApagar = new System.Windows.Forms.Label();
+            this.TxbNomeApagar = new System.Windows.Forms.TextBox();
+            this.LblNomeApagar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvContatos)).BeginInit();
             this.GrbAdicionarContatos.SuspendLayout();
             this.GrbEditarContatos.SuspendLayout();
+            this.GrbApagar.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnSair
@@ -73,15 +79,15 @@
             // DgvContatos
             // 
             this.DgvContatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvContatos.Location = new System.Drawing.Point(12, 12);
+            this.DgvContatos.Location = new System.Drawing.Point(12, 2);
             this.DgvContatos.Name = "DgvContatos";
-            this.DgvContatos.Size = new System.Drawing.Size(656, 347);
+            this.DgvContatos.Size = new System.Drawing.Size(984, 375);
             this.DgvContatos.TabIndex = 1;
             // 
             // GrbAdicionarContatos
             // 
             this.GrbAdicionarContatos.Controls.Add(this.BtnAdicionar);
-            this.GrbAdicionarContatos.Controls.Add(this.dateTimePicker1);
+            this.GrbAdicionarContatos.Controls.Add(this.DtpAdicionar);
             this.GrbAdicionarContatos.Controls.Add(this.LblAniversario);
             this.GrbAdicionarContatos.Controls.Add(this.LblTelefone);
             this.GrbAdicionarContatos.Controls.Add(this.textBox1);
@@ -99,21 +105,63 @@
             this.GrbAdicionarContatos.TabStop = false;
             this.GrbAdicionarContatos.Text = "Adicionar Contatos";
             // 
-            // LblNome
+            // BtnAdicionar
             // 
-            this.LblNome.AutoSize = true;
-            this.LblNome.Location = new System.Drawing.Point(64, 70);
-            this.LblNome.Name = "LblNome";
-            this.LblNome.Size = new System.Drawing.Size(58, 18);
-            this.LblNome.TabIndex = 0;
-            this.LblNome.Text = "Nome:";
+            this.BtnAdicionar.BackColor = System.Drawing.Color.ForestGreen;
+            this.BtnAdicionar.Location = new System.Drawing.Point(82, 239);
+            this.BtnAdicionar.Name = "BtnAdicionar";
+            this.BtnAdicionar.Size = new System.Drawing.Size(191, 39);
+            this.BtnAdicionar.TabIndex = 9;
+            this.BtnAdicionar.Text = "ADICIONAR";
+            this.BtnAdicionar.UseVisualStyleBackColor = false;
             // 
-            // TxbNome
+            // DtpAdicionar
             // 
-            this.TxbNome.Location = new System.Drawing.Point(142, 67);
-            this.TxbNome.Name = "TxbNome";
-            this.TxbNome.Size = new System.Drawing.Size(166, 24);
-            this.TxbNome.TabIndex = 1;
+            this.DtpAdicionar.Location = new System.Drawing.Point(142, 177);
+            this.DtpAdicionar.Name = "DtpAdicionar";
+            this.DtpAdicionar.Size = new System.Drawing.Size(166, 24);
+            this.DtpAdicionar.TabIndex = 8;
+            // 
+            // LblAniversario
+            // 
+            this.LblAniversario.AutoSize = true;
+            this.LblAniversario.Location = new System.Drawing.Point(30, 180);
+            this.LblAniversario.Name = "LblAniversario";
+            this.LblAniversario.Size = new System.Drawing.Size(92, 18);
+            this.LblAniversario.TabIndex = 7;
+            this.LblAniversario.Text = "Aniversario";
+            // 
+            // LblTelefone
+            // 
+            this.LblTelefone.AutoSize = true;
+            this.LblTelefone.Location = new System.Drawing.Point(44, 141);
+            this.LblTelefone.Name = "LblTelefone";
+            this.LblTelefone.Size = new System.Drawing.Size(78, 18);
+            this.LblTelefone.TabIndex = 6;
+            this.LblTelefone.Text = "Telefone:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(142, 138);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 24);
+            this.textBox1.TabIndex = 5;
+            // 
+            // LblEmail
+            // 
+            this.LblEmail.AutoSize = true;
+            this.LblEmail.Location = new System.Drawing.Point(67, 108);
+            this.LblEmail.Name = "LblEmail";
+            this.LblEmail.Size = new System.Drawing.Size(55, 18);
+            this.LblEmail.TabIndex = 4;
+            this.LblEmail.Text = "Email:";
+            // 
+            // TxbEmail
+            // 
+            this.TxbEmail.Location = new System.Drawing.Point(142, 105);
+            this.TxbEmail.Name = "TxbEmail";
+            this.TxbEmail.Size = new System.Drawing.Size(166, 24);
+            this.TxbEmail.TabIndex = 3;
             // 
             // lblApresentacao
             // 
@@ -125,74 +173,32 @@
             this.lblApresentacao.TabIndex = 2;
             this.lblApresentacao.Text = "Por favor adicione aqui seu contato";
             // 
-            // TxbEmail
+            // TxbNome
             // 
-            this.TxbEmail.Location = new System.Drawing.Point(142, 105);
-            this.TxbEmail.Name = "TxbEmail";
-            this.TxbEmail.Size = new System.Drawing.Size(166, 24);
-            this.TxbEmail.TabIndex = 3;
+            this.TxbNome.Location = new System.Drawing.Point(142, 67);
+            this.TxbNome.Name = "TxbNome";
+            this.TxbNome.Size = new System.Drawing.Size(166, 24);
+            this.TxbNome.TabIndex = 1;
             // 
-            // LblEmail
+            // LblNome
             // 
-            this.LblEmail.AutoSize = true;
-            this.LblEmail.Location = new System.Drawing.Point(67, 108);
-            this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(55, 18);
-            this.LblEmail.TabIndex = 4;
-            this.LblEmail.Text = "Email:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(142, 138);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 24);
-            this.textBox1.TabIndex = 5;
-            // 
-            // LblTelefone
-            // 
-            this.LblTelefone.AutoSize = true;
-            this.LblTelefone.Location = new System.Drawing.Point(44, 141);
-            this.LblTelefone.Name = "LblTelefone";
-            this.LblTelefone.Size = new System.Drawing.Size(78, 18);
-            this.LblTelefone.TabIndex = 6;
-            this.LblTelefone.Text = "Telefone:";
-            // 
-            // LblAniversario
-            // 
-            this.LblAniversario.AutoSize = true;
-            this.LblAniversario.Location = new System.Drawing.Point(30, 180);
-            this.LblAniversario.Name = "LblAniversario";
-            this.LblAniversario.Size = new System.Drawing.Size(92, 18);
-            this.LblAniversario.TabIndex = 7;
-            this.LblAniversario.Text = "Aniversario";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(142, 177);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(166, 24);
-            this.dateTimePicker1.TabIndex = 8;
-            // 
-            // BtnAdicionar
-            // 
-            this.BtnAdicionar.BackColor = System.Drawing.Color.ForestGreen;
-            this.BtnAdicionar.Location = new System.Drawing.Point(82, 239);
-            this.BtnAdicionar.Name = "BtnAdicionar";
-            this.BtnAdicionar.Size = new System.Drawing.Size(191, 39);
-            this.BtnAdicionar.TabIndex = 9;
-            this.BtnAdicionar.Text = "ADICIONAR";
-            this.BtnAdicionar.UseVisualStyleBackColor = false;
+            this.LblNome.AutoSize = true;
+            this.LblNome.Location = new System.Drawing.Point(64, 70);
+            this.LblNome.Name = "LblNome";
+            this.LblNome.Size = new System.Drawing.Size(58, 18);
+            this.LblNome.TabIndex = 0;
+            this.LblNome.Text = "Nome:";
             // 
             // GrbEditarContatos
             // 
             this.GrbEditarContatos.Controls.Add(this.BtnEditar);
-            this.GrbEditarContatos.Controls.Add(this.dateTimePicker2);
+            this.GrbEditarContatos.Controls.Add(this.DtpEditar);
             this.GrbEditarContatos.Controls.Add(this.LblAniversarioEdit);
             this.GrbEditarContatos.Controls.Add(this.LblTelefoneEdit);
             this.GrbEditarContatos.Controls.Add(this.TxbTelefoneEdit);
             this.GrbEditarContatos.Controls.Add(this.LblEmailEdit);
             this.GrbEditarContatos.Controls.Add(this.TxbEmailEdit);
-            this.GrbEditarContatos.Controls.Add(this.label4);
+            this.GrbEditarContatos.Controls.Add(this.LblApresentarDoEditar);
             this.GrbEditarContatos.Controls.Add(this.TxbNomeEdit);
             this.GrbEditarContatos.Controls.Add(this.LblNomeEdit);
             this.GrbEditarContatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,12 +220,12 @@
             this.BtnEditar.Text = "EDITAR";
             this.BtnEditar.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker2
+            // DtpEditar
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(142, 177);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(166, 24);
-            this.dateTimePicker2.TabIndex = 8;
+            this.DtpEditar.Location = new System.Drawing.Point(142, 177);
+            this.DtpEditar.Name = "DtpEditar";
+            this.DtpEditar.Size = new System.Drawing.Size(166, 24);
+            this.DtpEditar.TabIndex = 8;
             // 
             // LblAniversarioEdit
             // 
@@ -262,15 +268,15 @@
             this.TxbEmailEdit.Size = new System.Drawing.Size(166, 24);
             this.TxbEmailEdit.TabIndex = 3;
             // 
-            // label4
+            // LblApresentarDoEditar
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(44, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(276, 18);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Por favor adicione aqui seu contato";
+            this.LblApresentarDoEditar.AutoSize = true;
+            this.LblApresentarDoEditar.ForeColor = System.Drawing.Color.White;
+            this.LblApresentarDoEditar.Location = new System.Drawing.Point(88, 34);
+            this.LblApresentarDoEditar.Name = "LblApresentarDoEditar";
+            this.LblApresentarDoEditar.Size = new System.Drawing.Size(176, 18);
+            this.LblApresentarDoEditar.TabIndex = 2;
+            this.LblApresentarDoEditar.Text = "Edite seu contato aqui";
             // 
             // TxbNomeEdit
             // 
@@ -288,12 +294,64 @@
             this.LblNomeEdit.TabIndex = 0;
             this.LblNomeEdit.Text = "Novo Nome:";
             // 
+            // GrbApagar
+            // 
+            this.GrbApagar.Controls.Add(this.BtnApagar);
+            this.GrbApagar.Controls.Add(this.LblApagar);
+            this.GrbApagar.Controls.Add(this.TxbNomeApagar);
+            this.GrbApagar.Controls.Add(this.LblNomeApagar);
+            this.GrbApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrbApagar.ForeColor = System.Drawing.Color.White;
+            this.GrbApagar.Location = new System.Drawing.Point(761, 491);
+            this.GrbApagar.Name = "GrbApagar";
+            this.GrbApagar.Size = new System.Drawing.Size(349, 180);
+            this.GrbApagar.TabIndex = 11;
+            this.GrbApagar.TabStop = false;
+            this.GrbApagar.Text = "Apagar Contatos";
+            // 
+            // BtnApagar
+            // 
+            this.BtnApagar.BackColor = System.Drawing.Color.Red;
+            this.BtnApagar.Location = new System.Drawing.Point(83, 131);
+            this.BtnApagar.Name = "BtnApagar";
+            this.BtnApagar.Size = new System.Drawing.Size(191, 39);
+            this.BtnApagar.TabIndex = 9;
+            this.BtnApagar.Text = "APAGAR";
+            this.BtnApagar.UseVisualStyleBackColor = false;
+            // 
+            // LblApagar
+            // 
+            this.LblApagar.AutoSize = true;
+            this.LblApagar.ForeColor = System.Drawing.Color.White;
+            this.LblApagar.Location = new System.Drawing.Point(30, 30);
+            this.LblApagar.Name = "LblApagar";
+            this.LblApagar.Size = new System.Drawing.Size(269, 18);
+            this.LblApagar.TabIndex = 2;
+            this.LblApagar.Text = "Voce desejas apagar este contato:";
+            // 
+            // TxbNomeApagar
+            // 
+            this.TxbNomeApagar.Location = new System.Drawing.Point(133, 66);
+            this.TxbNomeApagar.Name = "TxbNomeApagar";
+            this.TxbNomeApagar.Size = new System.Drawing.Size(166, 24);
+            this.TxbNomeApagar.TabIndex = 1;
+            // 
+            // LblNomeApagar
+            // 
+            this.LblNomeApagar.AutoSize = true;
+            this.LblNomeApagar.Location = new System.Drawing.Point(59, 69);
+            this.LblNomeApagar.Name = "LblNomeApagar";
+            this.LblNomeApagar.Size = new System.Drawing.Size(58, 18);
+            this.LblNomeApagar.TabIndex = 0;
+            this.LblNomeApagar.Text = "Nome:";
+            // 
             // ListaParaOsContatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Red;
+            this.BackColor = System.Drawing.Color.Purple;
             this.ClientSize = new System.Drawing.Size(1199, 725);
+            this.Controls.Add(this.GrbApagar);
             this.Controls.Add(this.GrbEditarContatos);
             this.Controls.Add(this.GrbAdicionarContatos);
             this.Controls.Add(this.DgvContatos);
@@ -309,6 +367,8 @@
             this.GrbAdicionarContatos.PerformLayout();
             this.GrbEditarContatos.ResumeLayout(false);
             this.GrbEditarContatos.PerformLayout();
+            this.GrbApagar.ResumeLayout(false);
+            this.GrbApagar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -325,19 +385,24 @@
         private System.Windows.Forms.TextBox TxbEmail;
         private System.Windows.Forms.Label lblApresentacao;
         private System.Windows.Forms.TextBox TxbNome;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DtpAdicionar;
         private System.Windows.Forms.Label LblAniversario;
         private System.Windows.Forms.Button BtnAdicionar;
         private System.Windows.Forms.GroupBox GrbEditarContatos;
         private System.Windows.Forms.Button BtnEditar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker DtpEditar;
         private System.Windows.Forms.Label LblAniversarioEdit;
         private System.Windows.Forms.Label LblTelefoneEdit;
         private System.Windows.Forms.TextBox TxbTelefoneEdit;
         private System.Windows.Forms.Label LblEmailEdit;
         private System.Windows.Forms.TextBox TxbEmailEdit;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LblApresentarDoEditar;
         private System.Windows.Forms.TextBox TxbNomeEdit;
         private System.Windows.Forms.Label LblNomeEdit;
+        private System.Windows.Forms.GroupBox GrbApagar;
+        private System.Windows.Forms.Button BtnApagar;
+        private System.Windows.Forms.Label LblApagar;
+        private System.Windows.Forms.TextBox TxbNomeApagar;
+        private System.Windows.Forms.Label LblNomeApagar;
     }
 }
