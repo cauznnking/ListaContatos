@@ -83,6 +83,7 @@
             this.DgvContatos.Name = "DgvContatos";
             this.DgvContatos.Size = new System.Drawing.Size(984, 375);
             this.DgvContatos.TabIndex = 1;
+            this.DgvContatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvContatos_CellClick);
             // 
             // GrbAdicionarContatos
             // 
@@ -318,6 +319,7 @@
             this.BtnApagar.TabIndex = 9;
             this.BtnApagar.Text = "APAGAR";
             this.BtnApagar.UseVisualStyleBackColor = false;
+            this.BtnApagar.Click += new System.EventHandler(this.BtnApagar_Click);
             // 
             // LblApagar
             // 
