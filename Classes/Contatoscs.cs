@@ -58,7 +58,7 @@ namespace ListaContatos.Classes
 
         public bool Apagar()
         {
-            string comando = "DELETE FROM usuarios WHERE id = @id";
+            string comando = "DELETE FROM contatos WHERE id = @id";
             Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);
@@ -103,7 +103,40 @@ namespace ListaContatos.Classes
 
         }
 
+        public bool Modificar()
+        {
+            string comando = "UPDATE contatos SET nome = @nome, email = @email, Telefone = @telefone WHERE id = @id ";
+            //comando sql caso senha esteja vazia:
+           
+            Banco.ConexaoBanco conexaoBD = new Banco.ConexaoBanco();
+            MySqlConnection con = conexaoBD.ObterConexao();
+            MySqlCommand cmd = new MySqlCommand(comando, con);
 
+            cmd.Parameters.AddWithValue("@id", Id);
+            cmd.Parameters.AddWithValue("@nome", Nome);
+            cmd.Parameters.AddWithValue("@email", Email);
+            cmd.Parameters.AddWithValue("@telefone", Telefone);
+
+            cmd.Prepare();
+            try
+            {
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    conexaoBD.Desconectar(con);
+                    return false;
+                }
+                else
+                {
+                    conexaoBD.Desconectar(con);
+                    return true;
+                }
+            }
+            catch
+            {
+                conexaoBD.Desconectar(con);
+                return false;
+            }
+        }
 
 
     }

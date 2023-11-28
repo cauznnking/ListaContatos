@@ -57,12 +57,30 @@ namespace ListaContatos
             idSelecionado = (int)linha.Cells[0].Value;
         }
 
+        public void AtualizarTudo()
+        {
+            Classes.Contatoscs produto = new Classes.Contatoscs();
+            // Atualizar o DGV:
+            DgvContatos.DataSource = produto.ListarTudo();
+            // Listar os campos de edição:
+            TxbNomeEdit.Clear();
+            TxbEmailEdit.Clear();
+            LblApagar.Text = "Selecione um produto para apagar.";
+            // Desabilitar os grbs:
+            GrbApagar.Enabled = false;
+            GrbEditarContatos.Enabled = false;
+            // Limpar os campos:
+            TxbNome.Clear();
+            TxbEmail.Clear();
+            TxbTelefone.Clear();
+        }
+
         private void BtnApagar_Click(object sender, EventArgs e)
         {
             Classes.Contatoscs contatos = new Classes.Contatoscs();
             contatos.Id = idSelecionado;
             //apagar:
-            var r = MessageBox.Show("Tem certeza que desejas apagar o usuarios?", "ATENÇÃO",
+            var r = MessageBox.Show("Tem certeza que desejas apagar este contato?", "ATENÇÃO",
             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (r == DialogResult.Yes)
@@ -79,6 +97,65 @@ namespace ListaContatos
                     MessageBox.Show("FALHA AO APAGAR", "ERROR",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            Classes.Contatoscs contatos = new Classes.Contatoscs();
+
+
+            // obter os valores dos Txbs
+            contatos.Id = idSelecionado;
+            contatos.Nome = TxbNomeEdit.Text;
+            contatos.Email = TxbEmailEdit.Text;
+            contatos.Telefone = TxbTelefoneEdit.Text;
+
+            //editar
+            if (contatos.Modificar() == true)
+            {
+                MessageBox.Show("CONTATO MODIFICADO ", "SUCESSO",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //atualizar o dgv:
+                DgvContatos.DataSource = contatos.ListarTudo();
+                //limpar os campos de edição
+                TxbEmailEdit.Clear();
+                TxbNomeEdit.Clear();
+                TxbTelefoneEdit.Clear();
+               
+            }
+            else
+            {
+                MessageBox.Show("FALHA AO MODIFICAR O CONTATO ", "FALHA",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnAdicionar_Click(object sender, EventArgs e)
+        {
+            //isntanciar o ususario
+            Classes.Contatoscs contatos = new Classes.Contatoscs();
+
+            //obter valores dos campos 
+            contatos.Nome = TxbNome.Text;
+            contatos.Email = TxbEmail.Text;
+            contatos.Telefone = TxbTelefone.Text;
+            contatos.Data_Aniversario = DtpAdicionar.Value;
+
+            if (contatos.Adicionar() == true)
+            {
+                MessageBox.Show("Usuario cadastrado com exito!!");
+                // Limpar os campos:
+                TxbNome.Clear();
+                TxbEmail.Clear();
+                TxbTelefone.Clear();
+                DtpAdicionar.ResetText();
+                // Atualizar o dgv:
+                DgvContatos.DataSource = contatos.ListarTudo();
+            }
+            else
+            {
+                MessageBox.Show("falha ao cadastrar o usuario!!");
             }
         }
     }

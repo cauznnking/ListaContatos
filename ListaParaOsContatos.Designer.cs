@@ -36,7 +36,7 @@
             this.DtpAdicionar = new System.Windows.Forms.DateTimePicker();
             this.LblAniversario = new System.Windows.Forms.Label();
             this.LblTelefone = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxbTelefone = new System.Windows.Forms.TextBox();
             this.LblEmail = new System.Windows.Forms.Label();
             this.TxbEmail = new System.Windows.Forms.TextBox();
             this.lblApresentacao = new System.Windows.Forms.Label();
@@ -56,8 +56,7 @@
             this.GrbApagar = new System.Windows.Forms.GroupBox();
             this.BtnApagar = new System.Windows.Forms.Button();
             this.LblApagar = new System.Windows.Forms.Label();
-            this.TxbNomeApagar = new System.Windows.Forms.TextBox();
-            this.LblNomeApagar = new System.Windows.Forms.Label();
+            this.LblDescricao = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvContatos)).BeginInit();
             this.GrbAdicionarContatos.SuspendLayout();
@@ -91,7 +90,7 @@
             this.GrbAdicionarContatos.Controls.Add(this.DtpAdicionar);
             this.GrbAdicionarContatos.Controls.Add(this.LblAniversario);
             this.GrbAdicionarContatos.Controls.Add(this.LblTelefone);
-            this.GrbAdicionarContatos.Controls.Add(this.textBox1);
+            this.GrbAdicionarContatos.Controls.Add(this.TxbTelefone);
             this.GrbAdicionarContatos.Controls.Add(this.LblEmail);
             this.GrbAdicionarContatos.Controls.Add(this.TxbEmail);
             this.GrbAdicionarContatos.Controls.Add(this.lblApresentacao);
@@ -115,6 +114,7 @@
             this.BtnAdicionar.TabIndex = 9;
             this.BtnAdicionar.Text = "ADICIONAR";
             this.BtnAdicionar.UseVisualStyleBackColor = false;
+            this.BtnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
             // 
             // DtpAdicionar
             // 
@@ -141,12 +141,12 @@
             this.LblTelefone.TabIndex = 6;
             this.LblTelefone.Text = "Telefone:";
             // 
-            // textBox1
+            // TxbTelefone
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 138);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 24);
-            this.textBox1.TabIndex = 5;
+            this.TxbTelefone.Location = new System.Drawing.Point(142, 138);
+            this.TxbTelefone.Name = "TxbTelefone";
+            this.TxbTelefone.Size = new System.Drawing.Size(166, 24);
+            this.TxbTelefone.TabIndex = 5;
             // 
             // LblEmail
             // 
@@ -220,6 +220,7 @@
             this.BtnEditar.TabIndex = 9;
             this.BtnEditar.Text = "EDITAR";
             this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // DtpEditar
             // 
@@ -297,10 +298,9 @@
             // 
             // GrbApagar
             // 
+            this.GrbApagar.Controls.Add(this.LblDescricao);
             this.GrbApagar.Controls.Add(this.BtnApagar);
             this.GrbApagar.Controls.Add(this.LblApagar);
-            this.GrbApagar.Controls.Add(this.TxbNomeApagar);
-            this.GrbApagar.Controls.Add(this.LblNomeApagar);
             this.GrbApagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrbApagar.ForeColor = System.Drawing.Color.White;
             this.GrbApagar.Location = new System.Drawing.Point(761, 491);
@@ -313,9 +313,9 @@
             // BtnApagar
             // 
             this.BtnApagar.BackColor = System.Drawing.Color.Red;
-            this.BtnApagar.Location = new System.Drawing.Point(83, 131);
+            this.BtnApagar.Location = new System.Drawing.Point(77, 131);
             this.BtnApagar.Name = "BtnApagar";
-            this.BtnApagar.Size = new System.Drawing.Size(191, 39);
+            this.BtnApagar.Size = new System.Drawing.Size(197, 39);
             this.BtnApagar.TabIndex = 9;
             this.BtnApagar.Text = "APAGAR";
             this.BtnApagar.UseVisualStyleBackColor = false;
@@ -325,27 +325,20 @@
             // 
             this.LblApagar.AutoSize = true;
             this.LblApagar.ForeColor = System.Drawing.Color.White;
-            this.LblApagar.Location = new System.Drawing.Point(30, 30);
+            this.LblApagar.Location = new System.Drawing.Point(34, 47);
             this.LblApagar.Name = "LblApagar";
             this.LblApagar.Size = new System.Drawing.Size(269, 18);
             this.LblApagar.TabIndex = 2;
             this.LblApagar.Text = "Voce desejas apagar este contato:";
             // 
-            // TxbNomeApagar
+            // LblDescricao
             // 
-            this.TxbNomeApagar.Location = new System.Drawing.Point(133, 66);
-            this.TxbNomeApagar.Name = "TxbNomeApagar";
-            this.TxbNomeApagar.Size = new System.Drawing.Size(166, 24);
-            this.TxbNomeApagar.TabIndex = 1;
-            // 
-            // LblNomeApagar
-            // 
-            this.LblNomeApagar.AutoSize = true;
-            this.LblNomeApagar.Location = new System.Drawing.Point(59, 69);
-            this.LblNomeApagar.Name = "LblNomeApagar";
-            this.LblNomeApagar.Size = new System.Drawing.Size(58, 18);
-            this.LblNomeApagar.TabIndex = 0;
-            this.LblNomeApagar.Text = "Nome:";
+            this.LblDescricao.AutoSize = true;
+            this.LblDescricao.Location = new System.Drawing.Point(34, 87);
+            this.LblDescricao.Name = "LblDescricao";
+            this.LblDescricao.Size = new System.Drawing.Size(273, 18);
+            this.LblDescricao.TabIndex = 10;
+            this.LblDescricao.Text = "Voce desejas apagar este contato?";
             // 
             // ListaParaOsContatos
             // 
@@ -382,7 +375,7 @@
         private System.Windows.Forms.GroupBox GrbAdicionarContatos;
         private System.Windows.Forms.Label LblNome;
         private System.Windows.Forms.Label LblTelefone;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxbTelefone;
         private System.Windows.Forms.Label LblEmail;
         private System.Windows.Forms.TextBox TxbEmail;
         private System.Windows.Forms.Label lblApresentacao;
@@ -404,7 +397,6 @@
         private System.Windows.Forms.GroupBox GrbApagar;
         private System.Windows.Forms.Button BtnApagar;
         private System.Windows.Forms.Label LblApagar;
-        private System.Windows.Forms.TextBox TxbNomeApagar;
-        private System.Windows.Forms.Label LblNomeApagar;
+        private System.Windows.Forms.Label LblDescricao;
     }
 }
