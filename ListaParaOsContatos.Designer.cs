@@ -80,7 +80,7 @@
             this.DgvContatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvContatos.Location = new System.Drawing.Point(12, 2);
             this.DgvContatos.Name = "DgvContatos";
-            this.DgvContatos.Size = new System.Drawing.Size(984, 375);
+            this.DgvContatos.Size = new System.Drawing.Size(547, 375);
             this.DgvContatos.TabIndex = 1;
             this.DgvContatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvContatos_CellClick);
             // 
