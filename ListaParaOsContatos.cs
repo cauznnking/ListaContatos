@@ -65,7 +65,7 @@ namespace ListaContatos
             // Listar os campos de edição:
             TxbNomeEdit.Clear();
             TxbEmailEdit.Clear();
-            LblApagar.Text = "Selecione um produto para apagar.";
+            LblApagar.Text = "Selecione um contato para apagar.";
             // Desabilitar os grbs:
             GrbApagar.Enabled = false;
             GrbEditarContatos.Enabled = false;
@@ -88,7 +88,7 @@ namespace ListaContatos
                 //apagar
                 if (contatos.Apagar() == true)
                 {
-                    MessageBox.Show("PRODUTO APAGADO ", "SUCESSO",
+                    MessageBox.Show("CONTATO APAGADO ", "SUCESSO",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                     AtualizarTudo();
                 }
